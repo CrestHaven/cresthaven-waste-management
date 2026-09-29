@@ -48,8 +48,38 @@ footer{background:#071522;color:#aebdc9;padding:38px 0 25px}.footer-top{display:
 
 <section class="section" id="about"><div class="container"><div class="about"><div><div class="eyebrow-dark">About CrestHaven</div><h2>Built for multifamily. Focused on residents.</h2><p class="lead">CrestHaven Waste Management was founded in Brandon, Manitoba to bring a more convenient waste solution to multifamily properties. Our model combines a simple doorstep collection process with an operating approach designed to fit the needs of property owners, managers and residents — with a vision to scale across markets.</p></div><div class="about-card"><div class="eyebrow-dark">Our focus</div><h3 style="font-size:25px;margin:10px 0">A cleaner property experience, delivered consistently.</h3><p class="lead">We partner with apartment owners and property managers to establish the schedule, resident process and operating standards for the property.</p></div></div></div></section>
 
-<section class="section alt" id="contact"><div class="container"><div class="contact"><div><div class="eyebrow-dark">Contact Us</div><h2>Let's discuss your property.</h2><p class="lead">Tell us about your building and we'll discuss whether a 30-day pilot makes sense for your property.</p><div class="contact-info"><div class="contact-line"><b>Phone</b><span><a href="tel:+14315412203">431-541-2203</a></span></div><div class="contact-line"><b>Email</b><span><a href="mailto:reginald@cresthavenoperations.com">reginald@cresthavenoperations.com</a></span></div><div class="contact-line"><b>Head Office</b><span>Brandon, Manitoba</span></div><div class="contact-line"><b>Service Area</b><span>Multifamily properties across markets</span></div></div></div><form class="contact-form" action="mailto:reginald@cresthavenoperations.com" method="post" enctype="text/plain"><input class="field" name="Name" placeholder="Your name" required><input class="field" name="Company" placeholder="Property / company"><input class="field" name="Email" type="email" placeholder="Email" required><input class="field" name="Phone" placeholder="Phone"><input class="field" name="Units" placeholder="Approx. units"><input class="field" name="Address" placeholder="Property address"><textarea name="Message" placeholder="Tell us about your property..."></textarea><button class="submit full" type="submit">Request a Free 30-Day Pilot →</button></form></div></div></section>
+<section class="section alt" id="contact"><div class="container"><div class="contact"><div><div class="eyebrow-dark">Contact Us</div><h2>Let's discuss your property.</h2><p class="lead">Tell us about your building and we'll discuss whether a 30-day pilot makes sense for your property.</p><div class="contact-info"><div class="contact-line"><b>Phone</b><span><a href="tel:+14315412203">431-541-2203</a></span></div><div class="contact-line"><b>Email</b><span><a href="mailto:reginald@cresthavenoperations.com">reginald@cresthavenoperations.com</a></span></div><div class="contact-line"><b>Head Office</b><span>Brandon, Manitoba</span></div><div class="contact-line"><b>Service Area</b><span>Multifamily properties across markets</span></div></div></div><form class="contact-form" id="pilot-form"><input class="field" name="Name" placeholder="Your name" required><input class="field" name="Company" placeholder="Property / company"><input class="field" name="Email" type="email" placeholder="Email" required><input class="field" name="Phone" placeholder="Phone"><input class="field" name="Units" placeholder="Approx. units"><input class="field" name="Address" placeholder="Property address"><textarea name="Message" placeholder="Tell us about your property..."></textarea><button class="submit full" type="submit">Request a Free 30-Day Pilot →</button></form></div></div></section>
 
 <footer><div class="container"><div class="footer-top"><img class="footer-logo" src="assets/cresthaven-waste-logo.png" alt="CrestHaven Waste Management — professional multifamily waste collection"><div class="footer-links"><a href="#service">What We Do</a><a href="#why">Why Us</a><a href="#how">How It Works</a><a href="#noi">Pricing & NOI</a><a href="#contact">Contact</a></div></div><div class="copyright"><span>© 2026 CrestHaven Waste Management. All rights reserved.</span><span>Founded in Brandon, Manitoba · Built to scale globally · cresthavenoperations.com</span></div></div></footer>
+
+
+<script>
+document.getElementById('pilot-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  const data = new FormData(form);
+
+  const body = [
+    'New Free 30-Day Pilot Request',
+    '',
+    'Name: ' + (data.get('Name') || ''),
+    'Property / Company: ' + (data.get('Company') || ''),
+    'Email: ' + (data.get('Email') || ''),
+    'Phone: ' + (data.get('Phone') || ''),
+    'Approx. Units: ' + (data.get('Units') || ''),
+    'Property Address: ' + (data.get('Address') || ''),
+    '',
+    'Message:',
+    (data.get('Message') || '')
+  ].join('\n');
+
+  const mailto = 'mailto:reginald@cresthavenoperations.com'
+    + '?subject=' + encodeURIComponent('Free 30-Day Pilot Request')
+    + '&body=' + encodeURIComponent(body);
+
+  window.location.href = mailto;
+});
+</script>
 </body>
 </html>
