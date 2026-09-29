@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CrestHaven Waste Management | Multifamily Waste Collection</title>
+<meta name="description" content="CrestHaven Waste Management provides professional door-to-door waste collection for multifamily properties, with operations launched in Brandon, Manitoba and built to scale across markets.">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{--navy:#071b33;--navy2:#0d2a4a;--charcoal:#111820;--green:#1e6b58;--green2:#2c806b;--ink:#14263a;--muted:#607284;--line:#dce3e8;--soft:#f4f6f7;--white:#fff;--shadow:0 18px 55px rgba(7,27,51,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}img{max-width:100%;display:block}a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
+
+/* NAV */
+header{position:absolute;top:0;left:0;right:0;z-index:20;color:#fff}
+.nav{height:84px;display:flex;align-items:center;justify-content:space-between}
+.brand img{width:255px;height:auto;max-height:none;object-fit:contain}
+.links{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:600}
+.links a{opacity:.9}.links a:hover{opacity:1;color:#d9f1e9}
+.nav-cta{background:#fff;color:var(--navy);padding:12px 17px;border-radius:5px;font-weight:800;font-size:12px}
+.mobile-btn{display:none;background:none;border:1px solid #ffffff55;color:#fff;border-radius:5px;padding:8px 10px}
+
+/* HERO */
+.hero{
+    min-height:720px;
+    display:flex;
+    align-items:center;
+    color:#fff;
+    position:relative;
+    background:linear-gradient(90deg,rgba(4,13,24,.93) 0%,rgba(4,13,24,.78) 44%,rgba(4,13,24,.40) 100%),
+    url("https://images.unsplash.com/photo-1752445715873-70bf16ad8df0?auto=format&fit=crop&w=2200&q=85") center/cover;
+}
+.hero-content{padding:145px 0 90px;max-width:710px}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:1.8px;font-weight:800;color:#9fd4c3}
+.hero h1{font-size:clamp(43px,5.2vw,68px);line-height:1.05;letter-spacing:-2.6px;margin:16px 0 20px}
+.hero p{font-size:17px;max-width:630px;color:#e1e8ee}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 20px;border-radius:5px;font-size:13px;font-weight:800}
+.btn-primary{background:#fff;color:var(--navy)}.btn-primary:hover{background:#e9f4f0}
+.btn-outline{border:1px solid #ffffff80;color:#fff}
+.trust{margin-top:19px;font-size:12px;color:#bfcbd5}
+
+/* SECTIONS */
+.section{padding:76px 0}
+.section.alt{background:var(--soft)}
+.section.dark{background:var(--navy);color:#fff}
+.section-head{max-width:720px;margin-bottom:38px}
+.eyebrow-dark{color:var(--green);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px}
+.section h2{font-size:38px;line-height:1.15;letter-spacing:-1.5px;margin:10px 0 12px;color:var(--navy)}
+.dark h2{color:#fff}
+.lead{color:var(--muted);font-size:16px}
+.dark .lead{color:#c5d2dc}
+
+/* WHAT WE DO */
+.what-grid{display:grid;grid-template-columns:1.1fr 2fr;gap:45px;align-items:start}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.feature{padding:23px;border-left:1px solid var(--line)}
+.icon{width:46px;height:46px;border-radius:50%;background:#edf3f1;color:var(--navy);display:grid;place-items:center;font-size:17px;font-weight:800;margin-bottom:17px}
+.feature h3{font-size:14px;margin:0 0 7px}
+.feature p{font-size:13px;color:var(--muted);margin:0}
+
+/* WHY US */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why{padding:34px 36px;text-align:center;border-right:1px solid var(--line)}
+.why:last-child{border-right:0}
+.why .icon{margin:0 auto 16px;background:var(--navy);color:#fff}
+.why h3{font-size:17px;margin:0 0 8px}
+.why p{font-size:13px;color:var(--muted);margin:0}
+
+/* NOI */
+.noi{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:stretch}
+.table{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+.row{display:grid;grid-template-columns:1fr auto;padding:15px 18px;border-bottom:1px solid var(--line);font-size:14px}
+.row:last-child{border-bottom:0}
+.row strong{font-size:16px}
+.row.highlight{background:var(--navy);color:#fff}
+.row.green strong{color:#278467}
+.impact{border-radius:10px;background:#edf2f6;padding:35px;display:flex;flex-direction:column;justify-content:center}
+.impact .big{font-size:46px;font-weight:800;color:var(--navy);letter-spacing:-2px}
+.impact p{color:var(--muted)}
+
+/* OPS */
+.ops{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+.ops-copy{padding:5px 50px 5px 0}
+.checks{display:grid;gap:12px;margin-top:24px}
+.check{display:flex;gap:11px;font-size:14px}
+.check b{color:var(--green)}
+.ops-photo{
+    min-height:410px;
+    background:linear-gradient(90deg,rgba(7,27,51,.08),rgba(7,27,51,.08)),
+    url("https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1500&q=85") center/cover;
+    border-radius:8px;
+}
+
+/* ONBOARD — UPDATED IMAGE */
+.onboard{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:55px;
+    align-items:center;
+}
+.onboard-photo{
+    min-height:360px;
+    border-radius:8px;
+    background:url("https://images.unsplash.com/photo-1604076913837-52ab3c5c0f0c?auto=format&fit=crop&w=1500&q=85") center/cover;
+}
+.steps{display:grid;gap:20px}
+.step{display:grid;grid-template-columns:42px 1fr;gap:15px}
+.stepnum{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800}
+.step h3{margin:0 0 4px;font-size:15px}
+.step p{margin:0;color:var(--muted);font-size:13px}
+
+/* PILOT */
+.pilot{background:linear-gradient(100deg,var(--navy),var(--navy2));color:#fff}
+.pilot-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.pilot h2{color:#fff;margin-bottom:8px}
+.pilot p{color:#cbd7df;margin:0;max-width:650px}
+.pilot .btn{background:#fff;color:var(--navy);white-space:nowrap}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-card{padding:35px;background:var(--soft);border-radius:10px}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.contact-info{display:grid;gap:15px;margin-top:24px}
+.contact-line{display:flex;gap:13px;align-items:flex-start}
+.contact-line b{display:block}
+.contact-line span{color:var(--muted);font-size:14px}
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field,.contact-form textarea{width:100%;border:1px solid var(--line);border-radius:5px;padding:14px;font:inherit;font-size:13px;background:#fff}
+.contact-form textarea{grid-column:1/-1;min-height:130px;resize:vertical}
+.full{grid-column:1/-1}
+.submit{border:0;cursor:pointer;background:var(--navy);color:#fff;padding:15px;border-radius:5px;font-weight:800}
+
+/* FOOTER */
+footer{background:#071522;color:#aebdc9;padding:38px 0 25px}
+.footer-top{display:flex;justify-content:space-between;gap:30px;align-items:center}
+.footer-logo{width:180px}
+.footer-links{display:flex;gap:22px;font-size:12px}
+.footer-links a:hover{color:#fff}
+.copyright{border-top:1px solid #ffffff18;margin-top:28px;padding-top:18px;font-size:11px;display:flex;justify-content:space-between;gap:15px}
+
+/* MOBILE */
+@media(max-width:900px){
+    .links{display:none}
+    .mobile-btn{display:block}
+    .what-grid,.noi,.ops,.onboard,.about,.contact{grid-template-columns:1fr}
+    .feature-grid{grid-template-columns:1fr 1fr}
+    .three{grid-template-columns:1fr}
+    .why{border-right:0;border-bottom:1px solid var(--line)}
+    .why:last-child{border-bottom:0}
+    .pilot-grid{grid-template-columns:1fr}
+    .ops-photo{min-height:300px}
+    .ops-copy{padding:0 0 35px}
+    .onboard-photo{min-height:280px}
+    .contact-form{margin-top:10px}
+}
+
+@media(max-width:560px){
+    .nav-cta{display:none}
+    .brand img{width:190px}
+    .hero{min-height:680px}
+    .hero h1{font-size:43px}
+    .section{padding:58px 0}
+    .feature-grid{grid-template-columns:1fr}
+    .three{display:block}
+    .why{padding:28px 20px}
+    .copyright,.footer-top{flex-direction:column;align-items:flex-start}
+    .contact-form{grid-template-columns:1fr}
+    .contact-form textarea,.full{grid-column:auto}
+}
+</style>
+</head>
+
+<body id="top">
+
+<header>
+    <div class="container nav">
+        <a class="brand" href="#top"><img src="assets/cresthaven-waste-logo.png" alt="CrestHaven Waste Management — professional multifamily waste collection"></a>
+        <div class="links">
+            <a href="#service">What We Do</a>
+            <a href="#why">Why Us</a>
+            <a href="#how">How It Works</a>
+            <a href="#noi">Pricing & NOI</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a class="nav-cta" href="#pilot">Request a Free 30-Day Pilot</a>
+        </div>
+        <button class="mobile-btn" onclick="document.querySelector('.links').classList.toggle('show')">Menu</button>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-content">
+        <div class="eyebrow">MULTIFAMILY WASTE SERVICES · BUILT TO SCALE</div>
+        <h1>Professional Door-to-Door Waste Collection for Multifamily Properties.</h1>
+        <p>A professional valet waste service that helps create cleaner properties, a better resident experience, and a potential new property-level revenue opportunity. Founded in Brandon, Manitoba and built to scale across markets.</p>
+        <div class="actions">
+            <a class="btn btn-primary" href="#pilot">Request a Free 30-Day Pilot →</a>
+            <a class="btn btn-outline" href="#how">See How It Works</a>
+        </div>
+        <div class="trust">No obligation. No long-term commitment during the pilot.</div>
+    </div>
+</section>
+
+<section class="section" id="service">
+    <div class="container">
+        <div class="what-grid">
+            <div class="section-head">
+                <div class="eyebrow-dark">What We Do</div>
+                <h2>We handle the trash. You enjoy the benefits.</h2>
+                <p class="lead">CrestHaven Waste Management provides door-to-door waste collection for apartment buildings and condo communities. Residents place their bagged trash in a provided bin outside their door on scheduled nights. We collect it and take it to the building's existing dumpster.</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature"><div class="icon">01</div><h3>Door-to-Door Collection</h3><p>Residents set it out. CrestHaven handles the rest.</p></div>
+                <div class="feature"><div class="icon">02</div><h3>Scheduled Service</h3><p>Consistent nightly collection on your chosen schedule.</p></div>
+                <div class="feature"><div class="icon">03</div><h3>Cleaner Properties</h3><p>Less waste sitting in hallways, elevators, or common areas.</p></div>
+                <div class="feature"><div class="icon">04</div><h3>Reliable & Professional</h3><p>A dedicated service built around consistency and discretion.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section alt" id="why">
+    <div class="container">
+        <div class="section-head" style="margin-left:auto;margin-right:auto;text-align:center">
+            <div class="eyebrow-dark">Why Property Managers Choose Us</div>
+            <h2>Operational value beyond the dumpster.</h2>
+        </div>
+        <div class="three">
+            <div class="why"><div class="icon">↗</div><h3>Potential NOI Growth</h3><p>Structure the service as a resident amenity and create a recurring property-level revenue opportunity.</p></div>
+            <div class="why"><div class="icon">$</div><h3>Predictable Wholesale Cost</h3><p>Our illustrative model uses a $12 per-unit monthly service rate, giving owners a clear operating cost.</p></div>
+            <div class="why"><div class="icon">✓</div><h3>Cleaner Building Experience</h3><p>A defined collection window can reduce waste left in shared spaces and improve resident convenience.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="noi">
+    <div class="container">
+        <div class="section-head">
+            <div class="eyebrow-dark">Illustrative NOI Example</div>
+            <h2>See the economics at a glance.</h2>
+            <p class="lead">Example only. Actual economics depend on the property, lease structure, resident participation and agreed service terms.</p>
+        </div>
+        <div class="noi">
+            <div class="table">
+                <div class="row"><span>Units</span><strong>50</strong></div>
+                <div class="row"><span>Illustrative resident amenity fee</span><strong>$25 / unit / month</strong></div>
+                <div class="row"><span>Illustrative CrestHaven service cost</span><strong>$12 / unit / month</strong></div>
+                <div class="row green"><span>Illustrative difference</span><strong>$13 / unit / month</strong></div>
+                <div class="row highlight"><span>Illustrative monthly NOI opportunity</span><strong>$650</strong></div>
+                <div class="row highlight"><span>Illustrative annual NOI opportunity</span><strong>$7,800</strong></div>
+            </div>
+            <div class="impact">
+                <div class="eyebrow-dark">Real numbers. Real
